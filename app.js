@@ -173,7 +173,12 @@ function resolver(){
             r = r.toFixed(5)
             break;
         case '^':
-            r = parseFloat(num1) ** parseFloat(num2);
+            num2 = parseFloat(num2);
+            num1 = parseFloat(num1);
+            r = 1;
+            for(let i = 1; i <= num2; i++){
+                r = num1 * r
+            }
             break;
         case '√':
             r = parseFloat(num1) ** (1/2);
